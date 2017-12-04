@@ -7,8 +7,8 @@ public class triggerEndGame : MonoBehaviour {
 
     //public GameObject winMenu;
 
-    public Text playerTimeText;
-    public float playerTime;
+    //public Text playerTimeText;
+    //public float playerTime;
 
     public GameObject gameWonMenu;
     public GameObject animatedDropShip;
@@ -31,13 +31,6 @@ public class triggerEndGame : MonoBehaviour {
         staticDropShip.SetActive(true);
     }
 
-    public void Start()
-    {
-        PlayerPrefs.SetFloat("PlayerLevelTime", 0f);
-
-        GameController.instance.enablePlayerTimer = true;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
@@ -50,8 +43,6 @@ public class triggerEndGame : MonoBehaviour {
     public void gameWon()
     {
         Invoke("gotoMainMenu", 11f);
-        playerTime = PlayerPrefs.GetFloat("PlayerLevelTime");
-        playerTimeText.text = "Your Time: " + playerTime.ToString("F2");
 
         GameController.instance.hidePlayer();
 

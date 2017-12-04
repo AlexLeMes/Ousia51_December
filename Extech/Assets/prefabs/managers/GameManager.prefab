@@ -72,3 +72,4 @@ MonoBehaviour:
   hidePlayerPos: {x: -300, y: 6, z: 300}
   playerTime: 0
   enablePlayerTimer: 0
+  playerTimeText: {fileID: 0}

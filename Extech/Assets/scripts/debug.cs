@@ -44,5 +44,7 @@ public class debug : MonoBehaviour {
                 commandLine.text = "UNKOWN COMMAND";
                 break;
         }
+
+        GameController.instance.hideMouse();
     }
 }

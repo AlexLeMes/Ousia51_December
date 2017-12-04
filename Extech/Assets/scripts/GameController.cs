@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour {
 
     public float playerTime = 0f;
     public bool enablePlayerTimer = false;
+    public Text playerTimeText;
 
     private void Awake()
     {
@@ -62,6 +63,9 @@ public class GameController : MonoBehaviour {
     */
     void Start ()
     {
+
+        playerTime = 0f;
+
         spawnPoint = GameObject.FindGameObjectWithTag("playerSpawnPoint");
 
         playerUI = GameObject.FindGameObjectWithTag("playerUI");
@@ -115,10 +119,7 @@ public class GameController : MonoBehaviour {
         if(enablePlayerTimer)
         {
             playerTime += Time.deltaTime;
-        }
-        else if(!enablePlayerTimer)
-        {
-            savePlayerTime(playerTime);
+            playerTimeText.text = "Your Time: " + playerTime.ToString("F2");
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -131,12 +132,17 @@ public class GameController : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.C))
         {
             console.SetActive(!console.activeSelf);
-        }
-    }
 
-    public void savePlayerTime(float time)
-    {
-        PlayerPrefs.SetFloat("PlayerLevelTime", time);
+            if(!console.activeSelf)
+            {
+                hideMouse();
+            }
+            else
+            {
+                showMouse();
+            }
+            
+        }
     }
 
     public void respawn()
