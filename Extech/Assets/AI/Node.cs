@@ -34,18 +34,4 @@ public class Node
         Debug.Log("I am  initialised");
 
     }
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-

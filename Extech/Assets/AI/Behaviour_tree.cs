@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +9,12 @@ using UnityScript;
 public class Behaviour_tree : MonoBehaviour
 {
 
+    public bool attack;
     public Node root;
-    public GameObject player;
+    public GameObject _player;
     public GameObject[] waypoints;
     public int target;
     public float speed;
-    public float moveSpeed;
     public bool playerspotted;
     public bool canmove;
     public float maxdistance = 15;
@@ -25,31 +25,37 @@ public class Behaviour_tree : MonoBehaviour
     public RaycastHit hitInfo;
     public character pct;
     public character ect;
-    public float Maxvel = 1;
-    public Vector3 Currvel;
     public Vector3 dir;
     public Vector3 tar;
     public float enemieawarness;
     public float slowradius;
     public float deceleration;
     public Vector3 steeringforce;
+    public float movespeed;
+    public bool idle;
+    public float avoidanceforce = 20;
+
+
+    public void Awake()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+        pct = _player.GetComponent<character>();
+        ect = gameObject.GetComponent<character>();
+    }
 
 
     public void Start()
     {
 
-        player = GameObject.FindGameObjectWithTag("Player");
-        pct = player.GetComponent<character>();
-        ect = this.gameObject.GetComponent<character>();
 
-        //InvokeRepeating("updateBehaviourTree", 0f,1f);
+        //InvokeRepeating("Update", 0f, 1f);
         target = 0;
 
         selector_node selector = new selector_node();
 
         root = selector;
 
-       
+
         sequenc_node sequenc = new sequenc_node();
         selector.children.Add(sequenc);
         sequenc.children.Add(new Chase());
@@ -62,28 +68,27 @@ public class Behaviour_tree : MonoBehaviour
 
         root.Start();
 
+
+
+
+
+
     }
-    
+    // Use this for initialization
     public void Update()
     {
-        //dir = (tar - transform.position).normalized;
 
-
-        root.Execute();
-        
-    }
-    /*
-    public void updateBehaviourTree()
-    {
-        dir = (tar - transform.position).normalized;
 
 
         root.Execute();
+
+
+
     }
-    */
     void OnDrawGizmos()
     {
         {
+
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, maxdistance);
             Gizmos.color = Color.red;
@@ -94,6 +99,10 @@ public class Behaviour_tree : MonoBehaviour
             Gizmos.DrawWireSphere(transform.position, enemieawarness);
             Gizmos.color = Color.black;
             Gizmos.DrawWireSphere(transform.position, slowradius);
+
+
+
+
         }
 
     }

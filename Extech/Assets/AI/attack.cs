@@ -5,26 +5,31 @@ using UnityEngine;
 public class attack : Node
 {
 
-    
+
     public override void Execute()
     {
-      
 
 
-        if (Vector3.Distance(BT.transform.position, BT.player.transform.position) < 2 && BT.ect.characterOnFire==false)
+
+        if (Vector3.Distance(BT.transform.position, BT._player.transform.position) < 5 && BT.ect.characterOnFire == false)
         {
-            Debug.Log("attack"+state);
+            BT.playerspotted = false;
+            BT.attack = true;
+            Debug.Log("attack" + state);
             state = Node_State.success;
-            BT.pct.takeDamage(0.1f);
-            //attack animation here
+            // BT.pct.takeDamage(0.1f);
+            BT.speed = 0;
 
         }
         else
         {
+            BT.playerspotted = true;
+            BT.attack = false;
             state = Node_State.faliure;
+            BT.speed = BT.movespeed;
         }
-        
-        
+
+
 
     }
 }

@@ -533,8 +533,8 @@ GameObject:
   - component: {fileID: 92368889154515702}
   - component: {fileID: 124107684801617556}
   - component: {fileID: 81465383931737880}
-  - component: {fileID: 114648782768546204}
   - component: {fileID: 82304124152765178}
+  - component: {fileID: 114471617027349436}
   m_Layer: 0
   m_Name: playerCamera
   m_TagString: MainCamera
@@ -2286,7 +2286,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b571b175f6d144c00945bf1b3e823531, type: 2}
+  - {fileID: 2100000, guid: af90dfe9a1152e94ca01ddd5c04a0a94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   player: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
   canShoot: 0
---- !u!114 &114648782768546204
+--- !u!114 &114471617027349436
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2859,10 +2859,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookat: {fileID: 4686351892183788}
-  MaxX: 6
-  MinX: -5
-  sensitivity: 250
-  offset: {x: 0, y: 3.6, z: -3.5}
+  MaxX: -6
+  MinX: 6
+  offset: {x: 0, y: 3, z: -4}
 --- !u!114 &114790999129321556
 MonoBehaviour:
   m_ObjectHideFlags: 1
