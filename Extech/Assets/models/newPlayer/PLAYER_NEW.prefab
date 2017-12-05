@@ -2860,7 +2860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookat: {fileID: 4686351892183788}
   MaxX: -6
-  MinX: 6
+  MinX: 10
   offset: {x: 0, y: 3, z: -4}
 --- !u!114 &114790999129321556
 MonoBehaviour:
@@ -2910,8 +2910,8 @@ MonoBehaviour:
   ischarging: 0
   flamethrowerpicked: 0
   canShoot: 1
-  maxGas: 500
-  gas: 500
+  maxGas: 150
+  gas: 100
   gasBar: {fileID: 0}
   gasBarObj: {fileID: 0}
   plasma: {fileID: 1819649527317586, guid: a69974c61944f4741b76f0135295a367, type: 2}

@@ -89,6 +89,7 @@
     <Compile Include="Assets\AI\Behaviour_tree.cs" />
     <Compile Include="Assets\AI\Chase.cs" />
     <Compile Include="Assets\AI\collision_avoidance.cs" />
+    <Compile Include="Assets\AI\enemyAnimationController.cs" />
     <Compile Include="Assets\AI\flee.cs" />
     <Compile Include="Assets\AI\idle.cs" />
     <Compile Include="Assets\AI\Node.cs" />

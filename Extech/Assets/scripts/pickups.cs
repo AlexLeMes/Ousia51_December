@@ -35,7 +35,7 @@ public class pickups : MonoBehaviour {
 
             if (healthPickup)
             {
-                if (_character != null)
+                if (_character != null && _character.health != _character.MaxHealth)
                 {
                     _character.heal(healAmmount);
                 }  
