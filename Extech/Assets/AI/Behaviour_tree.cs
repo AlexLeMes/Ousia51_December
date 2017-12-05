@@ -21,6 +21,7 @@ public class Behaviour_tree : MonoBehaviour
     public bool waypoint;
     public float angle;
     public float vision = 40;
+    public float attackRange = 2f;
     public RaycastHit hit;
     public RaycastHit hitInfo;
     public character pct;

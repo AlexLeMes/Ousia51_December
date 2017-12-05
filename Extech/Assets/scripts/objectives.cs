@@ -11,6 +11,7 @@ public class objectives : MonoBehaviour {
     public string currentObjectiveText;
     public string objectiveStatusText;
     public Text _objectiveText;
+    public Text bombTimerText;
 
     public bool bombObjectiveActive = false;
 
@@ -37,6 +38,7 @@ public class objectives : MonoBehaviour {
     public void Start()
     {
         explosionEffect.Stop();
+        bombTimerText.text = "";
     }
 
     private void Update()
@@ -46,7 +48,8 @@ public class objectives : MonoBehaviour {
         if(bombObjectiveActive && bombObjectiveTime > 0)
         {
             bombObjectiveTime -= Time.deltaTime;
-            _objectiveText.text = currentObjectiveText + " [TIME LEFT: " + bombObjectiveTime.ToString("F2") + "]";
+            _objectiveText.text = currentObjectiveText;
+            bombTimerText.text = bombObjectiveTime.ToString("F2");
 		}
 
         if(!objectiveComplete && bombObjectiveActive &&bombObjectiveTime <= 0)
