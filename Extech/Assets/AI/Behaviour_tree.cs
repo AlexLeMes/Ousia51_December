@@ -33,6 +33,7 @@ public class Behaviour_tree : MonoBehaviour
     public float deceleration;
     public Vector3 steeringforce;
     public float movespeed;
+    public float chaseSpeed;
     public bool idle;
     public float avoidanceforce = 20;
 

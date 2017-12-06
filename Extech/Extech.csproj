@@ -105,6 +105,7 @@
     <Compile Include="Assets\scripts\dev\patrolTest.cs" />
     <Compile Include="Assets\scripts\dev\playerTakeDamageTest.cs" />
     <Compile Include="Assets\scripts\door.cs" />
+    <Compile Include="Assets\scripts\explosionsController.cs" />
     <Compile Include="Assets\scripts\fire.cs" />
     <Compile Include="Assets\scripts\fireDamage.cs" />
     <Compile Include="Assets\scripts\GameController.cs" />

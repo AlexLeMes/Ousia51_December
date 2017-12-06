@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1669451378107704}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 70.14585, y: 130.22998, z: 137.99005}
+  m_LocalPosition: {x: 31.844852, y: 130.46999, z: 110.43005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4987917235721446}
@@ -161,7 +161,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 50
+  Priority: 5
   DopplerLevel: 1
   MinDistance: 0.49250507
   MaxDistance: 500
@@ -347,7 +347,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2120390098
+  randomSeed: 2077709846
   InitialModule:
     serializedVersion: 3
     enabled: 1

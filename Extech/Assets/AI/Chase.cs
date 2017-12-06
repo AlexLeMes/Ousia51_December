@@ -94,7 +94,7 @@ public class Chase : Node
 
             if (BT.playerspotted == true)
             {
-                BT.transform.position = Vector3.MoveTowards(BT.transform.position, BT._player.transform.position, BT.speed * Time.deltaTime);
+                BT.transform.position = Vector3.MoveTowards(BT.transform.position, BT._player.transform.position, BT.chaseSpeed * Time.deltaTime);
             }
 
             #endregion
