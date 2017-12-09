@@ -2157,7 +2157,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 1.5
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -2861,7 +2861,7 @@ MonoBehaviour:
   lookat: {fileID: 4686351892183788}
   MaxX: 15
   MinX: -15
-  offset: {x: 0, y: 3.5, z: -4}
+  offset: {x: 0, y: 3.5, z: -3}
 --- !u!114 &114790999129321556
 MonoBehaviour:
   m_ObjectHideFlags: 1

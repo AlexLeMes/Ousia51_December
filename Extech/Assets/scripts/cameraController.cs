@@ -85,8 +85,6 @@ public class cameraController : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, direction, 0);
 
 
-
-
         transform.position = pTrans.transform.position + rotation * offset;
 
 
