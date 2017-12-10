@@ -10,13 +10,19 @@ public class MainMenuController : MonoBehaviour {
 
 */
 
-    int mainLevel = 1;
 
-    public void loadMainLevel()
+    public GameObject creditsMenu;
+
+    private void Start()
     {
-        SceneManager.LoadScene(mainLevel);
+        creditsMenu.SetActive(false);
     }
 
+    public void toggleCredits()
+    {
+        creditsMenu.SetActive(!creditsMenu.activeSelf);
+    }
+   
     public void quitGame()
     {
         Application.Quit();
