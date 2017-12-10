@@ -15,6 +15,9 @@ public class GameController : MonoBehaviour {
     public GameObject console;
 
 
+    public GameObject loadScreen;
+
+
     GameObject player;
     playerController _playerController;
     GameObject playerUI;
@@ -63,6 +66,7 @@ public class GameController : MonoBehaviour {
     */
     void Start ()
     {
+        loadScreen.SetActive(true);
 
         playerTime = 0f;
 
@@ -116,6 +120,11 @@ public class GameController : MonoBehaviour {
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            loadScreen.SetActive(false);
+        }
+
         if(enablePlayerTimer)
         {
             playerTime += Time.deltaTime;

@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainLevel: 1
   console: {fileID: 0}
+  loadScreen: {fileID: 0}
   spawnPoint: {fileID: 0}
   pauseMenuObj: {fileID: 0}
   playerDeathMenu: {fileID: 0}
